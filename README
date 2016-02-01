@@ -1,3 +1,16 @@
+BUILD KERNEL:
+   Clone repo:
+	git clone https://github.com/roeblatt3/android_kernel_samsung_manta.git
+	cd exynos
+	git checkout 6.0
+
+   Build kernel:
+	export CROSS_COMPILE=`pwd`/../M/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/arm-eabi-
+	export ARCH=arm
+	make manta_defconfig
+	make -j4
+
+
 	Linux kernel release 3.x <http://kernel.org/>
 
 These are the release notes for Linux version 3.  Read them carefully,
